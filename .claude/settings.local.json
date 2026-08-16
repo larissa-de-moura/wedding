@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import datetime; print\\(datetime.date\\(2027,1,24\\).strftime\\('%A'\\)\\)\")",
+      "Bash(python3 scripts/optimize_image.py images/originals/hero-original.jpeg images/hero.jpg --width 2000 --quality 80)",
+      "Bash(python3 -m http.server 8000)",
+      "Bash(curl -s -o /dev/null -w \"index.html: %{http_code}\\\\n\" http://localhost:8000/)",
+      "Bash(curl -s -o /dev/null -w \"css: %{http_code}\\\\n\" http://localhost:8000/css/style.css)",
+      "Bash(curl -s -o /dev/null -w \"config.js: %{http_code}\\\\n\" http://localhost:8000/js/config.js)",
+      "Bash(curl -s -o /dev/null -w \"main.js: %{http_code}\\\\n\" http://localhost:8000/js/main.js)",
+      "Bash(python3 -c \"import playwright\")",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --screenshot=/tmp/wedding-hero.png --window-size=1440,1600 http://localhost:8000/)",
+      "Read(//tmp/**)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --print-to-pdf=/tmp/wedding2.pdf --no-pdf-header-footer --print-to-pdf-no-header \"http://localhost:8000/#rsvp\")",
+      "Bash(pdftoppm -png -r 100 -f 1 -l 1 wedding2.pdf rsvpcheck)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --print-to-pdf=/tmp/wedding3.pdf --no-pdf-header-footer \"http://localhost:8000/\")",
+      "Bash(pdftoppm -png -r 100 -f 3 -l 3 wedding3.pdf final)",
+      "Bash(python3 -c ' *)",
+      "Bash(google-chrome --headless --disable-gpu --no-sandbox --screenshot=/tmp/mobile-hero.png --window-size=390,844 \"http://localhost:8000/\")",
+      "Bash(python3 -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "WebFetch(domain:www.google.com)",
+      "Bash(file /home/lari/Documents/wedding/images/gallery/*.jpg)"
+    ]
+  }
+}
