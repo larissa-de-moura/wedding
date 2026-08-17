@@ -111,20 +111,6 @@ function initRsvp() {
     iframe.title = "RSVP form";
     frameWrap.appendChild(iframe);
     frameWrap.hidden = false;
-
-    // Some browsers (Safari ITP, Firefox strict tracking protection,
-    // in-app webviews) silently block Google Forms iframes with no
-    // visible error, so always offer a direct link as an escape hatch.
-    const openLinkUrl = RSVP_LINK_URL || RSVP_EMBED_URL;
-    if (openLinkUrl) {
-      const openLink = document.createElement("a");
-      openLink.href = openLinkUrl;
-      openLink.target = "_blank";
-      openLink.rel = "noopener";
-      openLink.className = "rsvp-open-link";
-      openLink.textContent = "Form not loading? Open it in a new tab";
-      frameWrap.appendChild(openLink);
-    }
   } else {
     fallback.hidden = false;
     const linkBtn = fallback.querySelector("[data-rsvp-link]");

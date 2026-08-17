@@ -10,9 +10,8 @@ const WEDDING_DATE = "2027-01-24T10:00:00";
 // Paste your Google Form / Tally share link here (e.g. an "embed" URL)
 // to show it inline on the RSVP section. Leave empty to show the
 // fallback button + email instead.
-const RSVP_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAJtWJ4xK3R4tAHZUuNkcotM6QtGfHhSLLY8f99OXB2CoK1A/viewform?embedded=true";
+const RSVP_EMBED_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAJtWJ4xK3R4tAHZUuNkcotM6QtGfHhSLLY8f99OXB2CoK1A/viewform?usp=publish-editor";
 
-// Used for the "open in a new tab" link shown under the embed (and by the
-// fallback button/link when RSVP_EMBED_URL is empty).
-const RSVP_LINK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAJtWJ4xK3R4tAHZUuNkcotM6QtGfHhSLLY8f99OXB2CoK1A/viewform";
+// Used by the RSVP fallback button/link when RSVP_EMBED_URL is empty.
+const RSVP_LINK_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdAJtWJ4xK3R4tAHZUuNkcotM6QtGfHhSLLY8f99OXB2CoK1A/viewform?usp=publish-editor";
 const CONTACT_EMAIL = "larissademoura96@gmail.com";
