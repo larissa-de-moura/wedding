@@ -80,7 +80,8 @@ function initCarousel() {
 
   function goTo(i) {
     index = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
     dots.forEach((dot, di) => dot.classList.toggle("is-active", di === index));
   }
 

@@ -52,7 +52,9 @@ a {
   color: var(--color-accent);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.25;
@@ -272,7 +274,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
-.story__text p + p {
+.story__text p+p {
   margin-top: 1.25rem;
 }
 
@@ -448,12 +450,13 @@ h1, h2, h3 {
   position: relative;
   max-width: 720px;
   margin: 0 auto;
+  /* overflow: hidden;
+  border-radius: 2px; */
 }
 
 .carousel__track {
   display: flex;
-  overflow: hidden;
-  border-radius: 2px;
+  transition: transform 0.4s ease;
 }
 
 .carousel__slide {
